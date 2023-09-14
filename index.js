@@ -1,18 +1,20 @@
-import path from 'path'
 import { fileURLToPath } from 'url'
+import path from 'path'
 import dotenv from 'dotenv'
 import cors from 'cors'
+import express from 'express'
+import initApp from './src/index.router.js'
+import chalk from 'chalk'
 
 
 //set directory dirname 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__dirname, './config/.env') })
-import express from 'express'
-import initApp from './src/index.router.js'
-import chalk from 'chalk'
+
 const app = express()
 // setup port and the baseUrl
-const port = process.env.PORT || 3000
+const port =  3000||process.env.PORT 
+console.log(port)
 initApp(app ,express)
 app.use(cors({})) //allow access from any
 
