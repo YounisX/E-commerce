@@ -14,7 +14,6 @@ dotenv.config({ path: path.join(__dirname, './config/.env') })
 const app = express()
 // setup port and the baseUrl
 const port =  3000||process.env.PORT 
-console.log(port)
 initApp(app ,express)
 app.use(cors({})) //allow access from any
 
