@@ -11,6 +11,7 @@ import reviewsRouter from './modules/reviews/reviews.router.js'
 import subcategoryRouter from './modules/subcategory/subcategory.router.js'
 import userRouter from './modules/user/user.router.js'
 import { globalErrorHandling } from './utils/errorHandling.js'
+import  cors from 'cors'
 
 import bodyParser from 'body-parser'
 
