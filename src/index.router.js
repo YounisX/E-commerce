@@ -23,6 +23,8 @@ const initApp = (app, express) => {
       // Now you should be able to access req.body.products as an object
     //Setup API Routing 
    app.use(bodyParser.json());
+   app.use(cors());
+
 
 app.get('/',(req,res,next)=>{
 return res.status(200).json({message:"Welcome to E-commerce API"})
